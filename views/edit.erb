@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">
+      function initRows() {
+        <%  @brews.each do |brew| %>
+        var name = 'name_'+<%= brew.id %>;
+        var ontap = 'ontap_'+<%= brew.id %>;
+        var category = 'category_'+<%= brew.id %>;
+        var color = 'color_'+<%= brew.id %>;
+        var medals = 'medals_'+<%= brew.id %>;
+        var soldout = 'soldout_'+<%= brew.id %>;
+        var abv = 'abv_'+<%= brew.id %>;
+        var ibu = 'ibu_'+<%= brew.id %>;
+        var glass = 'glass_'+<%= brew.id %>;
+        var growler = 'growler_'+<%= brew.id %>;
+        var edit = 'edit_'+<%= brew.id %>;
+        var save = 'save_'+<%= brew.id %>;
+        var del = 'del_'+<%= brew.id %>;
+
+        name = name.replace(/^\s+|\s+$/g,"");
+        ontap = ontap.replace(/^\s+|\s+$/g,"");
+        category = category.replace(/^\s+|\s+$/g,"");
+        color = color.replace(/^\s+|\s+$/g,"");
+        medals = medals.replace(/^\s+|\s+$/g,"");
+        soldout = soldout.replace(/^\s+|\s+$/g,"");
+        abv = abv.replace(/^\s+|\s+$/g,"");
+        ibu = ibu.replace(/^\s+|\s+$/g,"");
+        glass = glass.replace(/^\s+|\s+$/g,"");
+        growler = growler.replace(/^\s+|\s+$/g,"");
+        edit = edit.replace(/^\s+|\s+$/g,"");
+        save = save.replace(/^\s+|\s+$/g,"");
+        del = del.replace(/^\s+|\s+$/g,"");
+
+        document.getElementById(name).disabled = true;
+        document.getElementById(ontap).disabled = true;
+        document.getElementById(category).disabled = true;
+        document.getElementById(color).disabled = true;
+        document.getElementById(medals).disabled = true;
+        document.getElementById(soldout).disabled = true;
+        document.getElementById(abv).disabled = true;
+        document.getElementById(ibu).disabled = true;
+        document.getElementById(glass).disabled = true;
+        document.getElementById(growler).disabled = true;
+        document.getElementById(edit).disabled = false;
+        document.getElementById(save).disabled = true;
+        document.getElementById(del).disabled = false;
+        <% end %>
+      }
+
+      function editRow(id) {
+        <%  @brews.each do |brew| %>
+        var name = 'name_'+<%= brew.id %>;
+        var ontap = 'ontap_'+<%= brew.id %>;
+        var category = 'category_'+<%= brew.id %>;
+        var color = 'color_'+<%= brew.id %>;
+        var medals = 'medals_'+<%= brew.id %>;
+        var soldout = 'soldout_'+<%= brew.id %>;
+        var abv = 'abv_'+<%= brew.id %>;
+        var ibu = 'ibu_'+<%= brew.id %>;
+        var glass = 'glass_'+<%= brew.id %>;
+        var growler = 'growler_'+<%= brew.id %>;
+        var edit = 'edit_'+<%= brew.id %>;
+        var save = 'save_'+<%= brew.id %>;
+        var del = 'del_'+<%= brew.id %>;
+
+        name = name.replace(/^\s+|\s+$/g,"");
+        ontap = ontap.replace(/^\s+|\s+$/g,"");
+        category = category.replace(/^\s+|\s+$/g,"");
+        color = color.replace(/^\s+|\s+$/g,"");
+        medals = medals.replace(/^\s+|\s+$/g,"");
+        soldout = soldout.replace(/^\s+|\s+$/g,"");
+        abv = abv.replace(/^\s+|\s+$/g,"");
+        ibu = ibu.replace(/^\s+|\s+$/g,"");
+        glass = glass.replace(/^\s+|\s+$/g,"");
+        growler = growler.replace(/^\s+|\s+$/g,"");
+        edit = edit.replace(/^\s+|\s+$/g,"");
+        save = save.replace(/^\s+|\s+$/g,"");
+        del = del.replace(/^\s+|\s+$/g,"");
+
+        document.getElementById(name).disabled = true;
+        document.getElementById(ontap).disabled = true;
+        document.getElementById(category).disabled = true;
+        document.getElementById(color).disabled = true;
+        document.getElementById(medals).disabled = true;
+        document.getElementById(soldout).disabled = true;
+        document.getElementById(abv).disabled = true;
+        document.getElementById(ibu).disabled = true;
+        document.getElementById(glass).disabled = true;
+        document.getElementById(growler).disabled = true;
+        document.getElementById(edit).disabled = true;
+        document.getElementById(save).disabled = true;
+        document.getElementById(del).disabled = true;
+        <% end %>
+
+        var name = 'name_'+id;
+        var ontap = 'ontap_'+id;
+        var category = 'category_'+id;
+        var color = 'color_'+id;
+        var medals = 'medals_'+id;
+        var soldout = 'soldout_'+id;
+        var abv = 'abv_'+id;
+        var ibu = 'ibu_'+id;
+        var glass = 'glass_'+id;
+        var growler = 'growler_'+id;
+        var edit = 'edit_'+id;
+        var save = 'save_'+id;
+        var del = 'del_'+id;
+
+        name = name.replace(/^\s+|\s+$/g,"");
+        ontap = ontap.replace(/^\s+|\s+$/g,"");
+        category = category.replace(/^\s+|\s+$/g,"");
+        color = color.replace(/^\s+|\s+$/g,"");
+        medals = medals.replace(/^\s+|\s+$/g,"");
+        soldout = soldout.replace(/^\s+|\s+$/g,"");
+        abv = abv.replace(/^\s+|\s+$/g,"");
+        ibu = ibu.replace(/^\s+|\s+$/g,"");
+        glass = glass.replace(/^\s+|\s+$/g,"");
+        growler = growler.replace(/^\s+|\s+$/g,"");
+        edit = edit.replace(/^\s+|\s+$/g,"");
+        save = save.replace(/^\s+|\s+$/g,"");
+        del = del.replace(/^\s+|\s+$/g,"");
+
+        document.getElementById(name).disabled = false;
+        document.getElementById(ontap).disabled = false;
+        document.getElementById(category).disabled = false;
+        document.getElementById(color).disabled = false;
+        document.getElementById(medals).disabled = false;
+        document.getElementById(soldout).disabled = false;
+        document.getElementById(abv).disabled = false;
+        document.getElementById(ibu).disabled = false;
+        document.getElementById(glass).disabled = false;
+        document.getElementById(growler).disabled = false;
+        document.getElementById(edit).disabled = true;
+        document.getElementById(save).disabled = false;
+        document.getElementById(del).disabled = true;
+      }
+
+      function saveRow(id) {
+          var f = document.createElement('form');
+          f.style.display = 'none';
+          document.body.parentNode.appendChild(f);
+          f.method = 'POST';
+          f.action = '/brew/'+id;
+          var m = document.createElement('input');
+          m.setAttribute('type', 'hidden');
+          m.setAttribute('name', '_method');
+          m.setAttribute('value', 'put');
+          f.appendChild(m);
+          f.submit();
+      }
+
+      function deleteRow(id) {
+        if (confirm("Are you sure you want to delete item " + id + "?")) {
+          var f = document.createElement('form');
+          f.style.display = 'none';
+          document.body.parentNode.appendChild(f);
+          f.method = 'POST';
+          f.action = '/brew/'+id;
+          var m = document.createElement('input');
+          m.setAttribute('type', 'hidden');
+          m.setAttribute('name', '_method');
+          m.setAttribute('value', 'delete');
+          f.appendChild(m);
+          f.submit();
+        }
+      }
+
+    </script>
+    <style>
+
+body {
+  background-color: lightgray;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+h1 {
+  color:blue;
+}
+
+p {
+  color:green;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+
+tr:nth-child(odd) {
+  background: #fff;
+}
+
+input[type="text"][disabled] {
+  border-color: #fff;
+  color: #aaa;
+}
+
+input[type="select"][disabled] {
+  border-color: #fff;
+  color: #aaa;
+}
+
+select[disabled] {
+  margin: 5px;
+  background: #aaa;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+}
+
+select{
+    margin: 5px;
+    background: #ffccd2;
+    color: #000;
+    text-shadow:0 1px 0 rgba(0,0,0,0.4);
+}
+
+option:not(:checked) { 
+    background-color: white; 
+    color:#fff;
+}
+
+input:not([disabled]):not([type="submit"]):focus {
+  border-color: #fff;
+}
+
+input:not([disabled]):not([type="button"]):not([type="submit"]) {
+  background-color: #ffccd2;
+}
+
+.buttonadd {
+  color: #c6c6c6;
+  font: 1.0em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  padding: 3px;
+  background-color: #0000c3;
+  border:1px solid #ffcc00;
+  -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+  border-bottom:1px solid #9f9f9f;
+  cursor:pointer;
+}
+
+.buttonadd:hover {
+  color: #ffffff;
+  background-color: #0000d6;
+}
+
+.buttonadd:active{position:relative;top:2px;}
+
+    </style>
+    <title>Brews</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots"       content="all, index, follow" />
+    <meta name="distribution" content="global" />
+    <meta name="generator"    content="Me." />
+    <meta name="description"  content="This." />
+  </head>
+  <body onload="initRows();">
+    <form id="edit" action="/edit" method="post">
+      <h2>BE CAREFUL</h2>
+      <table class="brews" border="1" cellpadding="10" cellspacing="1">
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>ontap</th>
+          <th>category</th>
+          <th>color</th>
+          <th>medals</th>
+          <th>soldout</th>
+          <th>abv</th>
+          <th>ibu</th>
+          <th>glass</th>
+          <th>growler</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+<% @brews.each do | brew | %>
+        <tr>
+          <td align="center"><%= brew.id %><input type="hidden" id="id_<%= brew.id %>" value="<%= brew.id %>"></td>
+          <td><input type="text" size="33" id="name_<%= brew.id %>" value="<%= brew.name %>" disabled="true"></td>
+          <td>
+            <select id="ontap_<%= brew.id %>" disabled="true">
+              <option value="true"<% if brew.ontap > 0 %> selected<% end %>>True</option>
+              <option value="false"<% if brew.ontap < 1 %> selected<% end %>>False</option>
+            </select>
+          </td>
+          <td>
+            <select id="category_<%= brew.id %>" disabled="true">
+              <option value="seasonal"<% if brew.category == "seasonal" %> selected<% end %>>seasonal</option>
+              <option value="signature"<% if brew.category == "signature" %> selected<% end %>>signature</option>
+              <option value="special"<% if brew.category == "special" %> selected<% end %>>special</option>
+            </select>
+          </td>
+          <td><input type="text" id="color_<%= brew.id %>" value="<%= brew.color %>" disabled="true"></td>
+          <td><input type="text" size="4" id="medals_<%= brew.id %>" value="<%= brew.medals %>" disabled="true"></td>
+          <td>
+            <select id="soldout_<%= brew.id %>" disabled="true">
+              <option value="true"<% if brew.soldout > 0 %> selected<% end %>>True</option>
+              <option value="false"<% if brew.soldout < 1 %> selected<% end %>>False</option>
+            </select>
+          </td>
+          <td><input type="text" size="4" id="abv_<%= brew.id %>" value="<%= brew.abv %>" disabled="true"></td>
+          <td><input type="text" size="4" id="ibu_<%= brew.id %>" value="<%= brew.ibu %>" disabled="true"></td>
+          <td><input type="text" size="4" id="glass_<%= brew.id %>" value="<%= brew.glass %>" disabled="true"></td>
+          <td><input type="text" size="4" id="growler_<%= brew.id %>" value="<%= brew.growler %>" disabled="true"</td>
+          <td><input type="button" id="edit_<%= brew.id %>" value="edit" onClick="editRow(<%= brew.id %>)"></td>
+          <td><input type="button" id="save_<%= brew.id %>" value="save" onClick="saveRow(<%= brew.id %>)" disabled="true"></td>
+          <td><input type="button" id="del_<%= brew.id %>" value="delete" onClick="deleteRow(<%= brew.id %>)" disabled="false"></td>
+        </tr>
+<% end %>
+      </table>
+      <p>&nbsp;<input type="button" class="buttonadd" id="add" value="add brew" onClick="addRow()" disabled="false"></p>
+    </form>
+  </body>
+</html>
