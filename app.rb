@@ -6,6 +6,8 @@ require 'sinatra'
 require 'net/http'
 require "sinatra"
 require "sinatra/activerecord"
+
+set :bind, '0.0.0.0'
  
 set :database, "sqlite3:db/brews.db"
 require './models' 
